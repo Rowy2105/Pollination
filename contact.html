@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- Boiler plate taken from Code Institute -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+     <!-- Email.js -->
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+
+    <title>Pollination!</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+
+            <!-- Site logo and title name -->
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="assets/images/SunLogo.png" alt="Sun Logo">Pollination!</a>
+
+            <!-- Navbar button on smaller screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="menu-btn">menu</span>
+            </button>
+
+            <!-- Navigation list items -->
+            <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="play.html">Play!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="instructions.html">Instructions!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact form -->
+    <div class="container">
+        
+        <form id="contactForm" onsubmit="return sendMail(this);">
+            <h1>Contact Us</h1>
+            <!-- User name container -->
+            <div class="form-row">
+                <div class="col-md-6">
+                    <input name="name" id="name" type="text" class="form-control" placeholder="Name" required />
+                </div>
+
+                <!-- user email address container -->
+                <div class="col-md-6">
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Email"
+                        required />
+                </div>
+            </div>
+
+            <!-- User message container -->
+            <textarea class="form-control" name="feedback" id="feedback" rows="6" placeholder="Type Message Here"
+                required></textarea>
+
+
+            <!-- Send button -->
+            <div class="sendbutton">
+                <button type="submit" class="btn btn-light">Send</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+
+            <!-- Copyright -->
+            <p class="copyright">© RSM 2020</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_vHdXIsunJHnbKjRZXHHFw");
+   })();
+</script>
+    <script src="assets/js/email.js"></script>
+
+
+
+</body>
+
+</html>
